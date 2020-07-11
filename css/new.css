@@ -4,43 +4,49 @@
 	box-sizing: border-box;
 }
 
+
 html{
-	scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
-header{
+/*header*/
+
+.change{
 	position: fixed;
 	height: 60px;
 	width: 100%;
 	display: flex;
-	background: rgba(17,17,17,1);
-	padding: 0 60px;
+	background: rgba(17,17,17,0.7);
+	padding: 0 30px;
     align-items: center;
     justify-content: space-between;
     z-index: 1000;
 }
 
-header .logo{
+.change .logo{
 	color: white;
 	font-size: 40px;
 	text-decoration: none;
-	letter-spacing: 2px;
-	font-weight: 600;
 	font-family: 'Monoton', cursive;
 }
 
-header ul{
-	position: relative;
-	display: flex;
-	padding-left: 400px;
+label{
+	margin-top: 10px;
 }
 
-header ul li{
+.change ul{
+	position: relative;
+	display: flex;
+	padding-left: 470px;
+	padding-top: 13px;
+}
+
+.change ul li{
 	position: relative;
 	list-style: none;
 }
 
-header ul li a{
+.change ul li a{
 	position: relative;
 	color: white;
 	text-decoration: none;
@@ -51,9 +57,8 @@ header ul li a{
 	transition: background 0.6s ease;
 	font-family: 'Roboto', sans-serif;
 }
-
-header ul li a.active,
-header ul li a:hover{
+.change ul li a.active,
+.change ul li a:hover{
     color:yellow;
     -webkit-transform: scale(1.1);
 	transform: scale(1.1);
@@ -63,31 +68,35 @@ header ul li a:hover{
 	display: none;
 }
 
-section{
+
+/*home section*/
+
+.change1{
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	min-height: 100vh;
 	text-align: center;
-	background-image: url('https://th.bing.com/th/id/OIP.aCBUyKEGzpvT1qRZQNTupgHaEo?w=292&h=182&c=7&o=5&pid=1.7');
+	background-image: url('https://wallpapercave.com/wp/OryYmio.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 100vh;
+	
 }
 
-#Home .container{
+#Home .content{
 	width: 100%;
 	color: black;
 	font-family: 'Montserrat', sans-serif;
 }
 
-#Home .container h1{
+#Home .content h1{
 	font-size: 40px;
 	margin-top: 10px;
-	color: #fff;
+	color: #d6cece;
+	font-family: 'Roboto', sans-serif;
 }
 
-#Home .container h1::after{
+#Home .content h1::after{
     content: "Nitin";
     animation: textanim 10s linear infinite;
 }
@@ -97,45 +106,45 @@ section{
 		 content: "A Developer"; 
 	}
 	30%{
-		content: "A Youtuber";
+		content: "A Desiner";
 	}
 }
 
 
-
-#Home .container a{
+#Home .content a{
 	 display: inline-block;
-	color: white;
+	color: black;
 	width: 35px;
 	height: 35px;
-	background:black;
+	background:#cbc3d6;
+	font-weight: bold;
 	box-shadow:2px 2px #888888;
 	margin: 6px;
 	transition:all .3s linear;
 	border-radius: 50%;
 	text-decoration: none;
 }
-
-#Home .container a:hover i{
-    -webkit-transform: scale(1.1);
-	transform: scale(1.1);
-	color:yellow;
+   
+#Home .content a:hover i{         
+    -webkit-transform: scale(1.4);
+	transform: scale(1.4);
+	color:black;
 	border-color: yellow;
 }
 
-#Home .container a i{
+#Home .content a i{
 	padding: 10px;
 }
 
 
 
 
-/* about section */
-
+/*about section*/
 
 #About{
 	background-color: #f1f1f1;
 	position: relative;
+	padding-bottom: 20px;
 }
 
 #About  .title{
@@ -159,10 +168,9 @@ section{
 	height:200px;
 	border-radius: 50%;
 	border: 4px solid #444;
-
 }
 
-.container1 {
+.content1 {
 	padding-left: 30px;
 	margin-right: 30px;
 }
@@ -188,22 +196,14 @@ section{
     font-family: 'IBM Plex Sans', sans-serif;
  }
 
-.container1 .info2 {
-	margin-top: 20px;
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
+.other-info{
 	font-weight: 400;
 	font-size: 20px;
 }
 
-.container1 .info2 span{
-	width: calc(50% - 30px);
-	margin:  10px;
-}
 
-.container1 .btn{
-	margin-top: 14px;
+.about-btn .btn{
+	margin-top: 5px;
 	padding: 10px;
 	font-weight: bold;
 	font-size: 14px;
@@ -216,189 +216,26 @@ section{
     border:1px solid #48dbfb;
 }
 
-
-.btn:hover{
+ .about-btn .btn:hover{
 	color: #fff;
     background:#48dbfb;
 }
 
 
 
-/*contact*/
-
-#Contact{
-	background-color: #f1f1f1;
-	background-size: cover;
-}
-
-#Contact  .title{
-	padding-top: 60px;
-	margin-bottom: 60px;
-	color: black;
-	font-size: 30px;
-	font-family: 'Roboto', sans-serif;
-	text-decoration: underline;
-	text-align: center;	
-}
-
-.container4{
-	margin-left: 30px;
-	margin-right: 30px;
-}
-
-
-.contact-info{
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
-	padding-bottom: 60px;
-}
-
-.contact-info .itam{
-	width: 225px;
-	height: 160px;
-	background-color: #353b48;
-	color: white;
-	text-align: center;
-	border-radius: 4px;
-	cursor: pointer;
-	transition: .3s linear;
-	font-family: 'Roboto', sans-serif;
-}
-
-.contact-info i{
-	display: block;
-	font-size: 40px;
-	line-height: 120px;
-	height: 100px;
-}
-
-.contact-info .itam:hover{
-	background-color: #48dbfb;
-}
-
-.contact-form{
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
-}
-
-
-.contact-form input, .contact-form textarea{
-	width: 100%;
-	height: 50px;
-	margin: 10px 0;
-	background: #353b48;
-	border: none;
-	outline: none;
-	padding: 20px;
-	border-radius: 4px;
-	color: white;
-}
-
-.nameZone,.emailZone{
-	max-width: calc(50% - 10px);
-}
-.messagezone{
-	min-height: 200px;
-	resize: vertical;
-}
-
-.contact-form .btn{
-	width: 180px;
-	background: transparent;
-	font-size: 16px;
-	color: #48dbfb;
-	border:1px solid #48dbfb;
-	padding: 0px;
-	margin-left: auto;
-	cursor: pointer;
-	transition: .3s linear; 
-	margin-bottom: 60px;
-}
-
-.contact-form .btn:hover{
-    color: #fff;
-    background:#48dbfb;
-}
-
-
-/*footer*/
-
-.footer{
-	width: 100%;
-	height: 120px;
-	background: black;
-}
-
-.footer .social-link{
-	padding-top: 20px;
-	text-align: center;
-
-}
-
-.footer .social-link i{
-	padding: 10px;
-	width: 35px;
-	height: 35px;
-	border-radius: 30%;
-	margin: 4px;
-	color: white;
-}
-
-
-.footer .social-link a:hover i{
-    -webkit-transform: scale(1.1);
-	transform: scale(1.1);
-}
-
-.footer .social-link a .fa-twitter{
-	background: #1fb5f3;
-}
-
-.footer .social-link a .fa-instagram{
-	background: linear-gradient(white, red ,pink);
-}
-
-.footer .social-link a .fa-linkedin{
-    background: #1fb5f3;
-}
-
-.footer .social-link a .fa-youtube{
-    background: #ff1919;
-}
-
-.footer .social-link a .fa-github {
-    background: #1fb5f3;
-}
-
-.footer .social-link a .fa-facebook{
-	background: #1fb5f3;
-}
-
-
-
-.footer .copyright-text{
-	padding-top: 10px;
-	text-align: center;
-	color: white;
-	margin-bottom: 15px;
-}
-
-
-/*skills*/
+/*skills section*/
 
 #skills{
 		background-color: #2a2b2d;
 }
 
-.container3{
+.content3{
 	padding-top: 60px;
 	padding-bottom: 60px;
 	position: relative;
 }
 
-.container3 .title{
+.content3 .title{
 	margin-bottom: 60px;
 	position: relative;
 	color: white;
@@ -407,7 +244,6 @@ section{
 	text-decoration: underline;
 	text-align: center;
 }
-
 
 .ski{
 	padding-left: 20px;
@@ -415,12 +251,6 @@ section{
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
-}
-
-
-.skill{
-	width: calc(50% - 20px);
-	margin: 15px 0;
 }
 
 
@@ -479,13 +309,164 @@ section{
 
 
 
+/*contact section*/
 
 
 
+#Contact{
+	background-color: #f1f1f1;
+	background-size: cover;
+}
+
+#Contact  .title{
+	padding-top: 60px;
+	margin-bottom: 60px;
+	color: black;
+	font-size: 30px;
+	font-family: 'Roboto', sans-serif;
+	text-decoration: underline;
+	text-align: center;	
+}
+
+.content4{
+	margin-left: 30px;
+	margin-right: 30px;
+}
+
+.contact-info{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding-bottom: 60px;
+}
+
+.contact-info .itam{
+	width: 210px;
+	height: 160px;
+	background-color: #353b48;
+	color: white;
+	text-align: center;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: .3s linear;
+	font-family: 'Roboto', sans-serif;
+}
+
+.contact-info i{
+	display: block;
+	font-size: 40px;
+	line-height: 120px;
+	height: 100px;
+}
+
+.contact-info .itam:hover{
+	background-color: #48dbfb;
+}
+
+.contact-form{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.nameZone, .emailZone{
+	max-width: 100%;
+}
+
+.contact-form input, .contact-form textarea{
+	width: 100%;
+	height: 50px;
+	margin: 10px 0;
+	background: #353b48;
+	border: none;
+	outline: none;
+	padding: 20px;
+	border-radius: 4px;
+	color: white;
+}
+
+.messagezone{
+	min-height: 200px;
+	resize: vertical;
+}
+
+.contact-form .btn{
+	width: 180px;
+	background: transparent;
+	font-size: 16px;
+	color: #48dbfb;
+	border:1px solid #48dbfb;
+	padding: 0px;
+	margin-left:  15px;
+	cursor: pointer;
+	transition: .3s linear; 
+	margin-bottom: 60px;
+}
+
+.contact-form .btn:hover{
+    color: #fff;
+    background:#48dbfb;
+}
 
 
 
+/*footer*/
 
+.footer{
+	width: 100%;
+	height: 120px;
+	background: black;
+}
+
+.footer .social-link{
+	padding-top: 20px;
+	text-align: center;
+}
+
+.footer .social-link i{
+	padding: 10px;
+	width: 35px;
+	height: 35px;
+	border-radius: 30%;
+	margin: 4px;
+	color: white;
+}
+
+.footer .social-link a:hover i{
+    -webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+.footer .social-link a .fa-twitter{
+	background: #1fb5f3;
+}
+
+.footer .social-link a .fa-instagram{
+	background: linear-gradient(white, red ,pink);
+}
+
+.footer .social-link a .fa-linkedin{
+    background: #1fb5f3;
+}
+
+.footer .social-link a .fa-youtube{
+    background: #ff1919;
+}
+
+.footer .social-link a .fa-github {
+    background: #1fb5f3;
+}
+
+.footer .social-link a .fa-facebook{
+	background: #1fb5f3;
+}
+
+.footer .copyright-text{
+	padding-top: 10px;
+	text-align: center;
+	color: white;
+	margin-bottom: 15px;
+}
 
 
 
@@ -497,8 +478,8 @@ section{
 /*responsive*/
 
 
-@media(max-width: 992px){
-	header ul{
+@media(max-width: 1042px){
+	.change ul{
 		position: absolute;
 		top: 60px;
 		left: 0;
@@ -524,6 +505,7 @@ section{
 	.toggle{
 		display: block;
 		position: relative;
+		padding-right: 30px;
 		width: 30px;
 		height: 30px;
 		cursor: pointer;
@@ -560,37 +542,3 @@ section{
 		box-shadow: 0 0 #fff;
 	}
 }
-
-
-@media screen and (max-width: 750px){
-	.container1 .text{
-		margin: 0px;
-		padding: 0px;
-	}
-	.container1 .info2 span{
-		width: 100%;
-	}
-	.skill{
-		width: 100%;
-	}
-}
-
-
-
-@media (max-width: 890px){
-	.contact-info .itam{
-		width: 100%;
-		margin: 10px 0;
-	}
-    .nameZone, .emailZone{
-		max-width: 100%;
-	}
-}
-
-@media (max-width: 700px){
-	.container3{
-		margin-left: 30px;
-		margin-right: 30px;
-	}
-}
-
