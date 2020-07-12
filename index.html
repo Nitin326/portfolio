@@ -9,6 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&family=Monoton&family=Roboto:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+
 
 	<title>my website</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -133,10 +135,12 @@ label{
 
 @keyframes textanim{
 	25%{
-		 content: "A Developer"; 
+		 content: "A Developer";
+		transition: 10s linear infinite;
 	}
 	30%{
-		content: "A Desiner";
+		content: "A Designer";
+		transition: 10s linear infinite;
 	}
 }
 
@@ -208,7 +212,7 @@ label{
 .about-content .text{
 	margin-top: 20px;
 	color: black;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'PT Sans', sans-serif;
 }
 
 
@@ -228,7 +232,7 @@ label{
 
 .other-info{
 	font-weight: 400;
-	font-size: 20px;
+	font-size: 18px;
 }
 
 
@@ -445,7 +449,7 @@ label{
 .footer{
 	width: 100%;
 	height: 120px;
-	background: black;
+	background: rgba(22,22,22,0.8);
 }
 
 .footer .social-link{
@@ -498,6 +502,10 @@ label{
 	margin-bottom: 15px;
 }
 
+.footer .copyright-text a{
+	color: white;
+	text-decoration: none;
+}
 
 
 
@@ -585,10 +593,10 @@ label{
 <header id="header" class="change">
 		<label class="logo">NITIN</label>
 		<ul>
-			<li><a href="#Home" class="active">HOME</a></li>
-			<li><a href="#About">ABOUT</a></li>
-			<li><a href="#skills">SKILLS</a></li>
-			<li><a href="#Contact">CONTACT</a></li>
+			<li><a href="#Home" class="active" onclick="toggle()">HOME</a></li>
+			<li><a href="#About" onclick="toggle()">ABOUT</a></li>
+			<li><a href="#skills" onclick="toggle()">SKILLS</a></li>
+			<li><a href="#Contact" onclick="toggle()">CONTACT</a></li>
 		</ul>
 		<div class="toggle" onclick="toggle()"></div>
 	</header>
@@ -637,9 +645,13 @@ label{
 
     		<div class="row ">
     			<span class="col-md-6  my-1">Degree: B.Tech</span>
-    			<span class="col-md-6 my-1">Email: nitin332709@gmail.com</span>
+    			<span class="col-md-6 my-1">Year: 1st Year</span>
     		</div>
 
+    		<div class="row ">
+    			<span class="col-md-6  my-1">College: Rajasthan Technical University, kota</span>
+    			<span class="col-md-6 my-1">Email: nitin332709@gmail.com</span>
+    		</div>
     	</div>
     	
     </div >
@@ -817,7 +829,7 @@ label{
 		<a href="https://www.facebook.com/nitin.sain.37669528"><i class="fab fa-facebook"></i></a>
 	</div>
 	<div class="copyright-text">
-		&copy;2020 | all rights reserved, nitin sain
+		&copy;2020 | all rights reserved, <a href="https://www.linkedin.com/in/nitin-sain-34a4671b2"> nitin sain</a>
 	</div>
 </div>
 </div>
